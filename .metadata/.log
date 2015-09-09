@@ -2751,3 +2751,55 @@ java.lang.NullPointerException
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
 	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.core.resources 4 2 2015-09-09 21:36:42.813
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NullPointerException
+	at org.jbpm.eclipse.util.DefaultJBPMRuntimeRecognizer.addJarNames(DefaultJBPMRuntimeRecognizer.java:38)
+	at org.jbpm.eclipse.util.DefaultJBPMRuntimeRecognizer.recognizeJars(DefaultJBPMRuntimeRecognizer.java:31)
+	at org.jbpm.eclipse.util.JBPMRuntimeManager.recognizeJars(JBPMRuntimeManager.java:227)
+	at org.jbpm.eclipse.util.JBPMRuntimeManager.getJBPMRuntimeJars(JBPMRuntimeManager.java:202)
+	at org.jbpm.eclipse.util.JBPMClasspathContainer.getJarNames(JBPMClasspathContainer.java:77)
+	at org.jbpm.eclipse.util.JBPMClasspathContainer.createJBPMLibraryEntries(JBPMClasspathContainer.java:65)
+	at org.jbpm.eclipse.util.JBPMClasspathContainer.getClasspathEntries(JBPMClasspathContainer.java:47)
+	at org.eclipse.jdt.internal.core.JavaModelManager$VariablesAndContainersSaveHelper.saveContainers(JavaModelManager.java:4136)
+	at org.eclipse.jdt.internal.core.JavaModelManager$VariablesAndContainersSaveHelper.saveProjects(JavaModelManager.java:4203)
+	at org.eclipse.jdt.internal.core.JavaModelManager$VariablesAndContainersSaveHelper.save(JavaModelManager.java:4044)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saveVariablesAndContainers(JavaModelManager.java:4015)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saving(JavaModelManager.java:4246)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:383)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:192)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:195)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1130)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.resources 2 2 2015-09-09 21:36:42.824
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 566 2015-09-09 21:36:42.824
+!MESSAGE Problems occurred during save.
+!STACK 0
+java.lang.NullPointerException
+	at org.jbpm.eclipse.util.DefaultJBPMRuntimeRecognizer.addJarNames(DefaultJBPMRuntimeRecognizer.java:38)
+	at org.jbpm.eclipse.util.DefaultJBPMRuntimeRecognizer.recognizeJars(DefaultJBPMRuntimeRecognizer.java:31)
+	at org.jbpm.eclipse.util.JBPMRuntimeManager.recognizeJars(JBPMRuntimeManager.java:227)
+	at org.jbpm.eclipse.util.JBPMRuntimeManager.getJBPMRuntimeJars(JBPMRuntimeManager.java:202)
+	at org.jbpm.eclipse.util.JBPMClasspathContainer.getJarNames(JBPMClasspathContainer.java:77)
+	at org.jbpm.eclipse.util.JBPMClasspathContainer.createJBPMLibraryEntries(JBPMClasspathContainer.java:65)
+	at org.jbpm.eclipse.util.JBPMClasspathContainer.getClasspathEntries(JBPMClasspathContainer.java:47)
+	at org.eclipse.jdt.internal.core.JavaModelManager$VariablesAndContainersSaveHelper.saveContainers(JavaModelManager.java:4136)
+	at org.eclipse.jdt.internal.core.JavaModelManager$VariablesAndContainersSaveHelper.saveProjects(JavaModelManager.java:4203)
+	at org.eclipse.jdt.internal.core.JavaModelManager$VariablesAndContainersSaveHelper.save(JavaModelManager.java:4044)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saveVariablesAndContainers(JavaModelManager.java:4015)
+	at org.eclipse.jdt.internal.core.JavaModelManager.saving(JavaModelManager.java:4246)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:383)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:192)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:195)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1130)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
